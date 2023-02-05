@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 html, body {
     margin: 0;
@@ -21,7 +21,7 @@ body {
 }
 
 .logo-txt {
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Bebas Neue', cursive;
     font-size: clamp(3rem, 3vw ,5rem);
     color: white;
     margin: 0;
@@ -49,6 +49,7 @@ body {
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
     padding: 1em 2em;
     align-self: center;
+    padding-bottom: 2em;
 }
 
 input {
@@ -56,6 +57,12 @@ input {
     padding: 8px;
     border-radius: 5px;
     border: #bdbdbd 1px solid;
+}
+
+input:focus {
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    outline: none;
+    border: #196dec 2px solid;
 }
 
 .allform {
@@ -69,14 +76,57 @@ label {
     margin-bottom: 5px;
     font-size: 0.7rem;
     letter-spacing: 0.2rem;
+    font-weight: 700;
+    color: #000000;
   }
 
 section {
     display: flex;
     gap: 4rem;
+    margin-bottom: 1.5rem;
 }
 
 .head-content{
     padding: 2rem;
     margin-top: 5%;
+}
+
+.submit-btn {
+    padding: 1em 2em;
+    font-size: 1rem;
+    background-color: #596D48;
+    margin: 2em;
+    margin-left: 3em;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    border: 0;
+    font-family: inherit;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.submit-btn:focus {
+    border: #262e1e 3px solid;
+    outline: none;
+}
+
+.login {
+    text-decoration: none;
+    font-weight: 800;
+    color: #596D48;
+}
+
+.already-have-an-acc {
+    padding-left: 3em;
+}
+
+#password-error {
+    color: red;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    padding-top: 4px;
+    font-weight: 600;
+    display: none;
 }

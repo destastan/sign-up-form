@@ -27,51 +27,57 @@
             <h2>Let's do this!</h2>
             <div class="allform">
                 <section class="firstlastname">
-                    <p>
-                        <label for="first-name">FIRST NAME</label>
-                        <input type="text" name="first-name" id="firstname">
-                    </p>
-                    <p>
-                        <label for="last-name">LAST NAME
-                
-                        </label>
-                        <input type="text" name="last-name" id="lastname">
-                    </p>
+                        <div class="first-name-container">
+                            <label for="first-name">FIRST NAME</label>
+                            <input type="text" name="first-name" id="firstname" placeholder="First Name" required>
+                        </div>
+                        <div class="last-name-container">
+                            <label for="last-name">LAST NAME</label>
+                            <input type="text" name="last-name" placeholder="Last Name" id="lastname">
+                        </div>
                 </section>
                 <section>
-                    <p>
-                        <label for="email">EMAIL
-                
-                        </label>
-                        <input type="email" name="email" id="mail">
-                    </p>
-                    <p>
-                        <label for="phone">PHONE NUMBER
-                
-                        </label>
-                        <input type="tel" name="phone" id="phone">
-                    </p>
+                        <div class="email-container">
+                            <label for="email">EMAIL</label>
+                            <input type="email" name="email" id="mail"  placeholder="yourname@hotmail.com" required>
+                        </div>
+                        <div class="phone-container">
+                            <label for="phone">PHONE NUMBER</label>
+                            <input type="tel" name="phone" placeholder="551-514-12-12" id="phone">
+                        </div>
                 </section>
                 <section>
-                    <p>
-                        <label for="password">PASSWORD
-                
-                        </label>
-                        <input type="password" name="password" id="password">
-                    </p>
-                    <p>
-                        <label for="password-confirm">CONFIRM PASSWORD
-                
-                        </label>
-                        <input type="password" name="password-confirm" id="password-confirm">
-                    </p>
+                    <div class="password-container">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="password">
+                        <div class="error" id="password-error" >Passwords do not match</div>
+                    </div>
+                    <div class="password-container">
+                        <label for="password-confirm">CONFIRM PASSWORD</label>
+                        <input type="password" id="password-confirm" name="password-confirm">
+                    </div>
                 </section>
                 
             </div>
         </div>
-        <button type="submit">Create Account</button>
-        <p>Already have an account? <a href="" class="login">Log in</a></p>
+        <button type="submit" class="submit-btn">Create Account</button>
+        <p class="already-have-an-acc">Already have an account? <a href="" class="login">Log in</a></p>
     </form>
     </div>
+
+    <script>
+    const password = document.getElementById("password");
+    const passwordConfirm = document.getElementById("password-confirm");
+    const errorMessage = document.getElementById("password-error");
+
+    passwordConfirm.addEventListener("focusout", function() {
+     if (password.value !== passwordConfirm.value) {
+        errorMessage.style.display = "block";
+     } else {
+        errorMessage.style.display = "none";
+        }
+    });
+    </script>
+
 </body>
 </html>
