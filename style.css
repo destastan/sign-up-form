@@ -1,64 +1,82 @@
-h1 {
-    margin-top: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-ul {
+html, body {
     margin: 0;
     padding: 0;
-    list-style: none;
+    font-family: 'Lato', sans-serif;
 }
-
-form {
-    margin: 0 auto;
-    width: 400px;
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
-}
-
-div+div {
-    margin-top: 1em;
-}
-
-label span {
-    display: inline-block;
-    width: 120px;
-    text-align: right;
-}
-
-input, textarea {
-    font: 1em sans-serif;
-    width: 250px;
-    box-sizing: border-box;
-    border: 1px solid #999;
-}
-
-input[type=checkbox], input[type=radio] {
+body {
+    display: flex;
+    height: 100vh;
     width: auto;
-    border: none;
+    background-color: #F9FAFB;
+
 }
 
-input:focus, textarea:focus {
-    border-color: #000;
+#bck-img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
 }
 
-textarea {
+.logo-txt {
+    font-family: 'Abril Fatface', cursive;
+    font-size: clamp(3rem, 3vw ,5rem);
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.logo {
+    position: relative;
+    height: 100vh;
+}
+
+.logo-wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.lets {
+    background-color: #FFFFFF;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    padding: 1em 2em;
+    align-self: center;
+}
+
+input {
+    width: 16em;
+    padding: 8px;
+    border-radius: 5px;
+    border: #bdbdbd 1px solid;
+}
+
+.allform {
+    display: inline-block;
     vertical-align: top;
-    height: 5em;
-    resize: vertical;
-}
-
-fieldset {
-    width: 250px;
-    box-sizing: border-box;
-    margin-left: 136px;
-    border: 1px solid #999;
-}
-
-button {
-    margin: 20px 0 0 124px;
+    margin-right: 20px;
 }
 
 label {
-  position: relative;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2rem;
+  }
+
+section {
+    display: flex;
+    gap: 4rem;
+}
+
+.head-content{
+    padding: 2rem;
+    margin-top: 5%;
 }
